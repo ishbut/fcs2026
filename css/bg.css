@@ -1,0 +1,37 @@
+.font-color{
+	color: #ffffff;
+}
+
+.text-contact {
+	max-width: 1250px;
+	min-height: 300px;
+	padding: 5px 5% 5px 5%;
+	/* min-width: 1000px; */
+	/* 55aaff */
+	/* background-color: #f9f9f9; */
+	/* opacity: 0.9; */
+	margin: 0 auto;
+	/* height: 95%; */
+	/* position: relative; */
+	/* position:fixed; */
+	/* left: 15%; */
+	/* right: 15%; */
+	/* margin: 0 0 155px 0; */
+
+	/* top: 150px;/ */
+	/* width: 100%; */
+	white-space: normal;
+	word-break: break-all;
+	overflow: auto;
+	/* opacity: 0.8; */
+	background-color: rgba(249,249,249, 0.4)
+}
+
+body {
+	background-image: url(../images/bg3.jpeg);
+	background-size: 100% 100%;
+}
+
+.my-nav-item>a {
+	font-size: 20px;
+}

@@ -1,0 +1,247 @@
+.center {
+	text-align: center;
+}
+
+.nav-title {
+	padding: 20px 0;
+	text-align: center;
+	margin: 0 0 2px 0;
+}
+
+
+.my-nav {
+	margin: 1px 0 0 0;
+	/* background-color: #195ea2; */
+	justify-content: center;
+}
+
+.my-nav-item {
+	list-style-type: none;
+}
+
+.my-nav-item>a {
+	font-size: 20px;
+}
+
+.icon {
+	/* #0D6EFD */
+	/* background-color: #195ea2; */
+	width: auto;
+	height: 140px;
+	align-items: left;
+	padding: 10px 0 10px 0;
+	margin: 0 auto;
+	
+}
+
+
+.icon-left {
+	/* width: 35%; */
+	height: 120px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	vertical-align: middle;
+	/* display: inline-block; */
+}
+
+.icon-right {
+	/* width: 55%; */
+	height: 120px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	vertical-align: middle;
+	/* display: block; */
+}
+
+.icon-end{
+	height: 115px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	vertical-align: middle;
+}
+
+.logo-divider {
+
+	margin: 0 18px;
+	height: max-content;
+	border-left: solid 2px white;
+	display: block;
+}
+
+.icon-ul {
+	margin: 0 auto;
+	/* width: 50%; */
+	/* min-width: 1000px; */
+	max-width: 1250px;
+	padding: 0 5% 0 5%;
+	/* padding-left: 15px; */
+	/* background-color: #195ea2; */
+}
+
+.icon-li {
+	display: inline;
+	height: max-content;
+	box-sizing: border-box;
+}
+
+.text-title {
+	/* background-color: #195ea2; */
+	dominant-baseline: middle;
+	padding: 8px 0 8px 0;
+}
+
+.text-title>span {
+	/* display: inline-block; */
+	/* vertical-align: bottom; */
+	height: 40px;
+	vertical-align: middle;
+	font-size: 25px;
+}
+
+.text-bg {
+	padding: 0 15% 0 15%;
+/* 	display: inline-block; */
+	/* width: 100%; */
+	height: 100%;
+	/* background-color: #195ea2; */
+}
+
+
+
+.text-contact1 {
+	/* min-height: 800px; */
+	/* height: 95%; */
+}
+
+#endNav {
+	padding: 5px 15% 5px 15%;
+	/* background-color: #b0bdc3; */
+	/* 	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 150px; */
+}
+
+.endNav>span {
+	font-family: "Times New Roman", Times, serif;
+}
+
+.icon-img {
+	color: #195ea2;
+}
+
+html{
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+body {
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+	overflow-x: hidden;
+	/* background-color: #55aaff; */
+}
+
+body {
+	background-image: url(../images/bg-01.png);
+	background-size: 100% 100%;
+}
+
+.carousel-item>img {
+	max-width: 1920px;
+	margin: 0 auto;
+}
+
+.my-carousel-item {
+	text-align: center;
+}
+
+.call-iframe {
+	position: relative;
+	width: 100%;
+	min-height: 1200px;
+	left: 0;
+	top: 0;
+}
+
+.determined-iframe {
+	position: relative;
+	width: 100%;
+	min-height: 300px;
+	left: 0;
+	top: 0;
+}
+
+.home-iframe{
+	/* position: relative; */
+	width: 100%;
+	min-height: 460px;
+	left: 0;
+	top: 0;
+}
+
+.committees-iframe{
+	position: relative;
+	width: 100%;
+	min-height: 800px;
+	left: 0;
+	top: 0;
+}
+.acceptedPaper-iframe{
+	position: relative;
+	width: 100%;
+	min-height: 800px;
+	left: 0;
+	top: 0;
+}
+.registration-iframe{
+	position: relative;
+	width: 100%;
+	min-height: 800px;
+	left: 0;
+	top: 0;
+}
+.venue-iframe{
+	position: relative;
+	width: 100%;
+	min-height: 500px;
+	left: 0;
+	top: 0;
+}
+
+.carousel-new-caption{
+	bottom: 15%;
+	color: #286592;
+}
+
+video {
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	min-width: 100%;
+	min-height: 100%;
+	height: auto;
+	width: auto;
+
+	z-index: -11
+} 
+	/*加滤镜*/
+	/*filter: blur(15px); //背景模糊设置 */
+	/*-webkit-filter: grayscale(100%);*/
+	/*filter:grayscale(100%); //背景灰度设置*/
+
+source {
+	min-width: 100%;
+	min-height: 100%;
+	height: auto;
+	width: auto;
+}
+
+iframe{
+	padding: 0;
+}

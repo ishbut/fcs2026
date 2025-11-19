@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FCS 2026</title>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta http-equiv="Expires" content="0">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Cache-control" content="no-cache">
+		<meta http-equiv="Cache" content="no-cache">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/style.css?v=1.0.0.1">
+		<link rel="stylesheet" href="css/bg.css">
+		<script src="js/bootstrap.js"></script>
+	</head>
+	<body>
+
+
+<!-- 		<div class='icon'>
+			<ul class="icon-ul">
+				<li class="icon-li"><img src="images/SCAU.png" class="icon-left" /></li>
+				<li class="icon-li ">
+					<img src="./images/divider.png" width="20" height="50"/>
+				</li>
+				<li class="icon-li"> <img src="images/CMICSE.png" class="icon-right" /></li>
+			</ul>
+		</div> -->
+		<div id="carouselCaptions" class="carousel slide my-carousel" data-bs-ride="carousel">
+			<div class="carousel-indicators">
+<!-- 				<button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="0" class="active"
+					aria-current="true" aria-label="Slide 1"></button> -->
+<!-- 				<button type="button" data-bs-target="#carouselCaptions" data-bs-slide-to="1"
+					aria-label="Slide 2"></button> -->
+			</div>
+			<div class="carousel-inner">
+				<div class="carousel-item my-carousel-item active">
+					<img src="images1/42.jpg" class="d-block  w-100 h-25" alt="...">
+					<div class="carousel-caption d-none d-md-block carousel-new-caption">
+						<h3><font color="#FFFFFF">The 9TH INTERNATIONAL CONFERENCE ON</font></h3>
+						<h3><font color="#FFFFFF"> FRONTIERS IN CYBER SECURITY</font></h3>
+						<h3> <font color="#FFFFFF">(FCS 2026)</font></h3>
+						<h4><font color="#FFFFFF">Macau, 3 - 5 August 2026</font></h4>
+					</div>
+				</div>
+<!-- 				<div class="carousel-item my-carousel-item">
+					<img src="images/bg-5.jpg" class="d-block  w-100 h-25" alt="...">
+					<div class="carousel-caption d-none d-md-block">
+						<h4>THE 16TH INTERNATIONAL CONFERENCE ON PROVABLE AND PRACTICAL SECURITY (PROVSEC 2022)</h4>
+						<h5>Nanjing, China, 11 - 12 November 2022</h5>
+					</div>
+				</div> -->
+			</div>
+<!-- 			<button class="carousel-control-prev" type="button" data-bs-target="#carouselCaptions"
+				data-bs-slide="prev">
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Previous</span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#carouselCaptions"
+				data-bs-slide="next">
+				<span class="carousel-control-next-icon" aria-hidden="true"></span>
+				<span class="visually-hidden">Next</span>
+			</button> -->
+		</div>
+		<div>
+			<ul class="nav nav-tabs my-nav">
+				<li class="nav-item my-nav-item">
+					<a id='homeButton' class="nav-link font-color active" aria-current="page" href="#"
+						onclick="activeFunction(this.id)">Home</a>
+				</li>
+				<li class="nav-item my-nav-item">
+					<a id='paperButton' class="nav-link font-color " href="#" onclick="activeFunction(this.id)">Call for Papers</a>
+				</li>
+				<li class="nav-item my-nav-item">
+					<a id='committeesButton' class="nav-link font-color" href="#" onclick="activeFunction(this.id)">Committees</a>
+				</li>
+				<li class="nav-item my-nav-item">
+					<a id='registrationButton' class="nav-link font-color" href="#"
+						onclick="activeFunction(this.id)">Registration</a>
+				</li>
+				<li class="nav-item my-nav-item">
+					<a id='acceptedButton' class="nav-link font-color" href="#" onclick="activeFunction(this.id)">Accepted Papers</a>
+				</li>
+				<li class="nav-item my-nav-item">
+					<a id='programButton' class="nav-link font-color" href="#" onclick="activeFunction(this.id)">Programme</a>
+				</li>
+				<li class="nav-item my-nav-item">
+					<a id='VenueButton' class="nav-link font-color" href="#" onclick="activeFunction(this.id)">Venue</a>
+				</li> 
+				<li class="nav-item my-nav-item">
+					<a id='speakersButton' class="nav-link font-color" href="#" onclick="activeFunction(this.id)">Keynotes</a>
+				</li>
+				<li class="nav-item my-nav-item">
+					<a id='aboutButton' class="nav-link font-color" href="#" onclick="activeFunction(this.id)">About Macau</a>
+				</li>
+			</ul>
+		</div>
+		<!-- END nav -->
+
+		<div id="homePage" style="display: block;" class="test">
+			
+			<div class="text-center text-title text-justify">
+				<img src="images/home.svg" class="icon-img" />
+				<span class="font-color">Overview</span>				
+			</div>
+			<div class="text-bg">
+				<div class="text-center text-contact">
+					<iframe src="home.html" id = 'homeIframe' 	
+						class="home-iframe">
+					</iframe>
+				</div>
+			</div>
+		</div>
+		<div id="paperPage" style="display: none;">
+			<div class="text-center text-title ">
+				<img src="images/carry_out.svg"/>
+				<span class="font-color">Call for Papers</span>
+			</div>
+			<div class="text-bg">
+				<div class="text-center text-contact">
+					<iframe src="callForPaper.html" id = 'paperIframe'
+						class="call-iframe">
+					</iframe>
+				</div>
+			</div>
+		</div>
+		<div id="committeesPage" style="display: none; ">
+			<div class="text-center text-title ">
+				<img src="images/user.svg" />
+				<span class="font-color">Committees</span>
+			</div>
+			<div class="text-bg">
+				<div class="text-center text-contact">
+					<iframe src="committees.html" id = 'committeesIframe'
+						class="committees-iframe">
+					</iframe>
+				</div>
+			</div>
+		</div>
+		<div id="registrationPage" style="display: none;">
+			<div class="text-center text-title ">
+				<img src="./images/register.svg" />
+				<span class="font-color">Registration</span>
+			</div>
+			<div class="text-bg">
+				<div class="text-center text-contact text-contact1">
+					<iframe src="registration.html" id="registrationIframe"
+						class="registration-iframe">
+					</iframe>
+				</div>
+			</div>
+		</div>
+		<div id="acceptedPage" style="display: none;">
+			<div class="text-center text-title ">
+				<img src="images/paper.svg" />
+				<span class="font-color">Accepted Papers</span>
+			</div>
+			<div class="text-bg">
+				<div class="text-center text-contact text-contact1">
+					<iframe src="acceptedPaper.html" id="acceptedPaperIframe"
+						class="acceptedPaper-iframe">
+					</iframe>
+				</div>
+			</div>
+		</div>
+		<div id="programPage" style="display: none;">
+			<div class="text-center text-title ">
+				<img src="images/arrange.svg" />
+				<span class="font-color">Programme</span>
+			</div>
+			<div class="text-bg">
+				<div class="text-center text-contact text-contact1">
+					<iframe src="programme.html" id="programmePaperIfram"
+						class="acceptedPaper-iframe">
+					</iframe>
+				</div>
+			</div>
+		</div>
+		<div id="VenuePage" style="display: none;">
+			<div class="text-center text-title ">
+				<img src="images/task.svg" />
+				<span class="font-color">Venue</span>
+				
+			</div>
+			<div class="text-bg">
+				<div class="text-center text-contact text-contact1">
+					<iframe src="venue.html" id="VenuePageIframe"
+						class="venue-iframe">
+					</iframe>
+				</div>
+			</div>
+		</div>
+		<div id="speakersPage" style="display: none;">
+			<div class="text-center text-title ">
+				<img src="images/people.svg" />
+				<span class="font-color">Keynotes</span>
+			</div>
+			<div class="text-bg">
+				<div class="text-center text-contact text-contact1">
+					<iframe src="speakers.html" id="speakersPageIframe"
+						class="venue-iframe">
+					</iframe>
+				</div>
+			</div>
+		</div>
+		<div id="aboutPage" style="display: none;">
+			<div class="text-center text-title ">
+				<img src="images/emoji-laughing.svg" />
+				<span class="font-color">About Macau</span>
+			</div>
+			<div class="text-bg">
+				<div class="text-center text-contact text-contact1">
+					<iframe src="about.html" id="aboutPageIframe"
+						class="venue-iframe">
+					</iframe>
+				</div>
+			</div>
+		</div>
+		<div id="endNav" class="endNav font-color">
+			<div class='icon'>
+				<ul class="icon-ul">
+				<li class="icon-li"> <img src="images1/cityu.png" class="icon-right" /></li>
+					<li class="icon-li"><img src="images1/11.png" class="icon-left"width="115" height="30" /></li>
+<!-- 					<li class="icon-li ">
+						<img src="./images/divider.png" width="20" height="50"/>
+					</li> 
+					<li class="icon-li"> <img src="images/ic2.png" class="icon-right" /></li>
+					-->
+					<li class="icon-li"> <img src="./images/Springer-logo.png" class="icon-end" /></li>
+					
+				</ul>
+			</div>
+<!-- 			<span>电话：</span><br />
+			<span>地址：</span><br />
+			<span>Copyright © 2021  All rights reserved</span><br />
+			<span>备案编号</span><br /> -->
+		</div>
+
+		<script>
+			var navMap = {
+				"homeButton": "homePage",
+				"paperButton": "paperPage",
+				"committeesButton": "committeesPage",
+				"registrationButton": "registrationPage",
+				"acceptedButton":"acceptedPage",
+				"programButton":"programPage",
+				"VenueButton": "VenuePage",
+				"speakersButton": "speakersPage",
+				"aboutButton": "aboutPage"
+			};
+			var iframeMap = {
+				"homePage":"homeIframe",
+				"paperPage":"paperIframe",
+				"committeesPage":"committeesIframe",
+				"acceptedPage":"acceptedPaperIframe",
+				"registrationPage":"registrationIframe",
+				"VenuePage":"VenuePageIframe",
+				"programPage":"programmePaperIfram",
+				"speakersPage":"speakersPageIframe",
+				"aboutPage":"aboutPageIframe"
+			}
+
+			function activeFunction(id) {
+				for (var tmp in navMap) {
+					if (id != tmp) {
+						var tmpItem = document.getElementById(tmp);
+						var tmpContact = document.getElementById(navMap[tmp]);
+						tmpItem.classList.remove("active");
+						tmpContact.style.display = "none";
+					} else {
+						var tmpItem = document.getElementById(tmp);
+						var tmpContact = document.getElementById(navMap[tmp]);
+						tmpItem.classList.add("active");
+						tmpContact.style.display = "block";
+					}
+				}
+			}
+			
+			function reinitIframe(id){
+				var iframe = document.getElementById(id);
+				try{
+				var bHeight = Math.ceil(iframe.contentWindow.document.body.scrollHeight);
+				var dHeight = Math.ceil(iframe.contentWindow.document.documentElement.scrollHeight);
+				console.log('b',bHeight)
+				console.log('d',dHeight)
+				var height = Math.max(bHeight, dHeight);
+				if(iframe.height != height){
+					iframe.height = height +'px';
+				}
+				}catch (ex){
+					console.log("error");
+				}
+			}
+			function checkHeight(){
+				//iframe 高度检查
+				for (var page in iframeMap){
+					var tmpContact = document.getElementById(page)
+					if( tmpContact.style.display == "block"){
+						reinitIframe(iframeMap[page])
+						break;
+					}
+				}
+			}
+			window.setInterval("checkHeight()", 50);
+		</script>
+	</body>
+</html>
