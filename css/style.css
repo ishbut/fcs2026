@@ -155,6 +155,9 @@ body {
 .carousel-item>img {
 	max-width: 1920px;
 	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	display: block;
 }
 
 .my-carousel-item {
@@ -215,7 +218,7 @@ body {
 }
 
 .carousel-new-caption{
-	bottom: 15%;
+	bottom: 30%;
 	color: #286592;
 }
 
