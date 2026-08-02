@@ -1,147 +1,747 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title></title>
-		<style>
-			table{
-				align-items: flex-start;
-				vertical-align: super;
-				width: 100%;
-			}
-			td{
-				vertical-align: super;
-				
-			}
-			td{
-				padding-bottom: 10px;
-			}
-			.firstTd{
-				width: 15%;
-			}
-			.secTd{
-				width: auto;
-			}
-			.endTable{
-				margin-bottom: 30px;
-			}
-			.infoTop{
-				margin-top: 50px;
-			}
-		</style>
-	</head>
-	<body>
-		
-		<div>
-		<!--
-	   <table style="vertical-align:middle; text-align: center; border-style: 1px solid black; width: 100%; height: 100%;">
-        <tr >
-          <td colspan="2" style="border:none;height: 40px;text-align: center; color:blue; font-weight: bolder; font-size: larger;">
-            Conference Program
-          </td>
-        </tr>
-        <tr>
-          <td colspan="2" style="border:none;height: 45px;text-align: left; text-indent: 20px;  font-size:normal">
-            <b>Notes: </b>All times and dates are shown in UTC+8.
-          </td>
-        </tr>
-         <tr>
-           <td colspan="2" style="font-weight: bolder;height: 45px;background-color:goldenrod;">
-            Day 1 (28/11/22)
-           </td>
-         </tr>
-         <tr>
-           <td style="width: 30%;">
-             09:00-09:30
-           </td>
-           <td>
-             Registration
-           </td>
-         </tr>
-         <tr>
-          <td>
-            09:30-09:45
-          </td>
-          <td>
-            Inauguration
-          </td>
-        </tr> 
-        <tr>
-          <td>
-            09:45-10:45
-          </td>
-          <td>
-		  <br/>Keynote Talk</b>
-            <br/>Speaker: <b>Tsuyoshi Takagi</b>
-            <br/>Session Chair:TBA
-          </td>
-        </tr> 
-        <tr>
-          <td>
-            10:45-11:15
-          </td>
-          <td>
-            Coffee Break
-          </td>
-        </tr> 
-        <tr>
-          <td>
-            11:15-12:30
-          </td>
-          <td>
-            <label style="font-weight:bold; background-color: gold;">Session 1:Symmetric-Key Cryptology I (3 talks)</label>
-            <br/>Session Chair:TBA
-          </td>
-        </tr> 
-        <tr>
-          <td>
-            12:30-13:40
-          </td>
-          <td>
-            Launch Break
-          </td>
-        </tr> 
-        <tr>
-          <td>
-            13:40-15:20
-          </td>
-          <td>
-            <label style="font-weight:bold; background-color: gold;">Session 2:Cryptographic Protocols (4 talks)</label>
-            <br/>Session Chair:TBA
-          </td>
-        </tr> 
-        <tr>
-          <td>
-            15:20-15:45
-          </td>
-          <td>
-            Coffee Break
-          </td>
-        </tr> 
-		<tr >
-          <td>
-            15:45-17:00
-          </td>
-          <td>
-            <label style="font-weight:bold; background-color: gold;">Session 3: Post-Quantum Cryptography (3 talks)</label>
-            <br/>Session Chair:TBA
-          </td>
-        </tr> 
-		<tr >
-          <td rowspan="2">
-            17:10-18:00
-          </td>
-          <td>
-            Australasian Researchers’ Meeting
-          </td>
-        </tr>
-		<tr >
-          <td>
-			Steering Committee Meeting
-          </td>
-        </tr>
-		</table>
-		-->
-		</div>
-	</body>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FCS 2026 Programme</title>
+<meta name="description" content="FCS 2026 program overview and paper sessions.">
+<style>:root {
+  --ink: #18233c;
+  --muted: #5e6b84;
+  --navy: #10245f;
+  --blue: #174795;
+  --cyan: #20b9df;
+  --page: #edf4fb;
+  --paper: #ffffff;
+  --line: #d7e3f1;
+  --soft: #f6f9fd;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--page);
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 0%, rgba(32, 185, 223, 0.14), transparent 30rem),
+    linear-gradient(180deg, #f7fbff, var(--page));
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Arial, "Noto Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.programme-page {
+  width: min(1120px, calc(100% - 40px));
+  margin: 34px auto 72px;
+  padding: clamp(26px, 5vw, 66px);
+  background: var(--paper);
+  border: 1px solid rgba(23, 71, 149, 0.1);
+  border-radius: 26px;
+  box-shadow: 0 24px 70px rgba(16, 36, 95, 0.16);
+}
+
+.programme-page > section + section {
+  margin-top: clamp(60px, 9vw, 104px);
+}
+
+h1 {
+  margin: 0 0 1.5rem;
+  padding: 0 0 0.8rem;
+  color: var(--navy);
+  font-size: clamp(1.9rem, 4vw, 2.8rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  border-bottom: 3px solid var(--cyan);
+}
+
+p {
+  margin: 0.68rem 0;
+}
+
+strong {
+  color: var(--navy);
+}
+
+.table-wrap {
+  max-width: 100%;
+  margin: 1.3rem 0 2rem;
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(16, 36, 95, 0.07);
+}
+
+table {
+  width: 100%;
+  min-width: 650px;
+  border-spacing: 0;
+  border-collapse: separate;
+  font-size: 0.92rem;
+  line-height: 1.48;
+  font-variant-numeric: tabular-nums;
+}
+
+th,
+td {
+  padding: 0.72rem 0.8rem;
+  vertical-align: middle;
+  text-align: left;
+  border-right: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+tr > :last-child {
+  border-right: 0;
+}
+
+tbody tr:last-child > * {
+  border-bottom: 0;
+}
+
+thead th {
+  color: white;
+  background-color: var(--navy);
+  background: linear-gradient(135deg, var(--navy), var(--blue));
+}
+
+tbody tr:nth-child(even):not(.day-row) td {
+  background: var(--soft);
+}
+
+tbody tr:hover:not(.day-row) td {
+  background: #edf7fc;
+}
+
+table p {
+  margin: 0.22rem 0;
+}
+
+.program-table .day-row td {
+  color: #0d2b64;
+  font-weight: 750;
+  text-align: center;
+  background: #dff2fb;
+}
+
+.program-table td:first-child,
+.session-table td:first-child,
+.session-table th:first-child {
+  width: 15%;
+  white-space: nowrap;
+}
+
+.session-card {
+  margin: 1.6rem 0 2.2rem;
+  padding: clamp(20px, 3.5vw, 34px);
+  background: linear-gradient(180deg, #fcfdff, #f6f9fd);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(16, 36, 95, 0.07);
+}
+
+.session-card .eyebrow {
+  margin: 0 0 0.45rem;
+  color: var(--blue);
+  font-size: 1.08rem;
+  font-weight: 780;
+  line-height: 1.4;
+}
+
+.session-card > p:nth-of-type(2) {
+  margin-top: 0.25rem;
+  font-weight: 650;
+}
+
+.session-card .table-wrap {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  body {
+    font-size: 15px;
+  }
+
+  .programme-page {
+    width: 100%;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  .session-card {
+    padding: 18px;
+  }
+}
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 12mm;
+  }
+
+  html,
+  body {
+    background: white;
+  }
+
+  .programme-page {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .programme-page > section + section {
+    break-before: page;
+  }
+
+  .table-wrap {
+    overflow: visible;
+    box-shadow: none;
+  }
+
+  table {
+    min-width: 0;
+    font-size: 8.5pt;
+  }
+
+  tr {
+    break-inside: avoid;
+  }
+
+  .session-card {
+    box-shadow: none;
+  }
+}
+</style>
+</head>
+<body><main class="programme-page"><section class="program-overview"><h1 id="program-overview">Program Overview</h1>
+<div class="table-wrap">
+<table class="program-table">
+<colgroup>
+<col style="width: 17%">
+<col style="width: 39%">
+<col style="width: 43%">
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="3"><strong>CSS 2026 &amp; FCS 2026 Program
+Overview</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Time</strong></td>
+<td><strong>Room 24+25</strong></td>
+<td><strong>Room 26</strong></td>
+</tr>
+<tr class="day-row even">
+<td colspan="3"><strong>Day 1 Aug 3,2026</strong></td>
+</tr>
+<tr class="odd">
+<td>08:30-18:00</td>
+<td colspan="2">Registration</td>
+</tr>
+<tr class="even">
+<td>09:10-09:30</td>
+<td colspan="2">Opening Ceremony</td>
+</tr>
+<tr class="odd">
+<td>09:30-10:00</td>
+<td colspan="2">Keynote 1 Robert Deng</td>
+</tr>
+<tr class="even">
+<td>10:00-10:30</td>
+<td colspan="2">Coffee Break &amp; Poster Session 1</td>
+</tr>
+<tr class="odd">
+<td>10:30-11:00</td>
+<td colspan="2">Keynote 2 Xiaosong Zhang</td>
+</tr>
+<tr class="even">
+<td>11:00-11:30</td>
+<td colspan="2">Keynote 3 Aniello Castiglione</td>
+</tr>
+<tr class="odd">
+<td>11:30-13:00</td>
+<td>CSS Oral Session 1</td>
+<td>FCS Oral Session 1</td>
+</tr>
+<tr class="even">
+<td>13:00-14:00</td>
+<td colspan="2">Lunch</td>
+</tr>
+<tr class="odd">
+<td>14:00-15:30</td>
+<td>CSS Oral Session 2</td>
+<td>FCS Oral Session 2</td>
+</tr>
+<tr class="even">
+<td>15:30-16:00</td>
+<td colspan="2">Coffee Break &amp; Poster Session 2</td>
+</tr>
+<tr class="odd">
+<td>16:00-18:00</td>
+<td>CSS Oral Session 3</td>
+<td>CCS Oral Session 4</td>
+</tr>
+<tr class="even">
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr class="day-row odd">
+<td colspan="3"><strong>Day 2 Aug 4, 2026</strong></td>
+</tr>
+<tr class="even">
+<td>08:30-18:00</td>
+<td colspan="2">Registration</td>
+</tr>
+<tr class="odd">
+<td>09:00-09:30</td>
+<td colspan="2">Keynote 4 Jianwei Liu</td>
+</tr>
+<tr class="even">
+<td>09:30-10:00</td>
+<td colspan="2">Keynote 5 Shengke Zeng</td>
+</tr>
+<tr class="odd">
+<td>10:00-10:30</td>
+<td colspan="2">Coffee Break &amp; Poster Session 3</td>
+</tr>
+<tr class="even">
+<td>10:30-11:00</td>
+<td colspan="2">Keynote 6 Chiara Pero</td>
+</tr>
+<tr class="odd">
+<td>11:00-12:30</td>
+<td>CSS Oral Session 5</td>
+<td>FCS Oral Session 3</td>
+</tr>
+<tr class="even">
+<td>12:30-14:00</td>
+<td colspan="2">Lunch</td>
+</tr>
+<tr class="odd">
+<td>14:00-15:30</td>
+<td>CSS Oral Session 6</td>
+<td>FCS Oral Session 4</td>
+</tr>
+<tr class="even">
+<td>15:30-16:00</td>
+<td colspan="2">Coffee Break &amp; Poster Session 4</td>
+</tr>
+<tr class="odd">
+<td>16:00-17:30</td>
+<td>CSS Oral Session 7</td>
+<td>CSS Oral Session 8 &amp; ASR Session</td>
+</tr>
+<tr class="even">
+<td>18:30-21:00</td>
+<td colspan="2">Banquet @Lisboeta Macau</td>
+</tr>
+<tr class="odd">
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+<tr class="day-row even">
+<td colspan="3"><strong>Day 3 Aug 5, 2026</strong></td>
+</tr>
+<tr class="odd">
+<td>08:00-12:00</td>
+<td colspan="2">Technical Visit &amp; Cultural Tour</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="table-wrap">
+<table class="program-table">
+<colgroup>
+<col style="width: 19%">
+<col style="width: 19%">
+<col style="width: 60%">
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="3"><strong>FCS 2026 Program Overview</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="day-row odd">
+<td colspan="3"><strong>Day 1 Aug 3, 2026</strong></td>
+</tr>
+<tr class="even">
+<td>08:30-18:00</td>
+<td>Foyer</td>
+<td>Registration</td>
+</tr>
+<tr class="odd">
+<td>09:10-09:30</td>
+<td>Room 24+25</td>
+<td>Opening Ceremony</td>
+</tr>
+<tr class="even">
+<td>09:30-10:00</td>
+<td>Room 24+25</td>
+<td>Keynote 1 Robert Deng</td>
+</tr>
+<tr class="odd">
+<td>10:00-10:30</td>
+<td>Foyer</td>
+<td>Coffee Break</td>
+</tr>
+<tr class="even">
+<td>10:30-11:00</td>
+<td>Room 24+25</td>
+<td>Keynote 2 Xiaosong Zhang</td>
+</tr>
+<tr class="odd">
+<td>11:00-11:30</td>
+<td>Room 24+25</td>
+<td>Keynote 3 Aniello Castiglione</td>
+</tr>
+<tr class="even">
+<td>11:30-13:00</td>
+<td>Room 26</td>
+<td>
+<p>Session 1: Post-Quantum Lattice Crypto</p>
+<p>Session Chair: Zhe Xia</p>
+</td>
+</tr>
+<tr class="odd">
+<td>13:00-14:00</td>
+<td>Room 2+3</td>
+<td>Lunch</td>
+</tr>
+<tr class="even">
+<td>14:00-15:30</td>
+<td>Room 26</td>
+<td>
+<p>Session 2: Secure Data Sharing</p>
+<p>Session Chair: Yuntao Wang</p>
+</td>
+</tr>
+<tr class="odd">
+<td>15:30-16:00</td>
+<td>Foyer</td>
+<td>Coffee Break</td>
+</tr>
+<tr class="day-row even">
+<td colspan="3"><strong>Day 2 Aug 4, 2026</strong></td>
+</tr>
+<tr class="odd">
+<td>08:30-18:00</td>
+<td>Foyer</td>
+<td>Registration</td>
+</tr>
+<tr class="even">
+<td>09:00-09:30</td>
+<td>Room 24+25</td>
+<td>Keynote 4 Jianwei Liu</td>
+</tr>
+<tr class="odd">
+<td>09:30-10:00</td>
+<td>Room 24+25</td>
+<td>Keynote 5 Shengke Zeng</td>
+</tr>
+<tr class="even">
+<td>10:00-10:30</td>
+<td>Foyer</td>
+<td>Coffee Break</td>
+</tr>
+<tr class="odd">
+<td>10:30-11:00</td>
+<td>Room 24+25</td>
+<td>Keynote 6 Chiara Pero</td>
+</tr>
+<tr class="even">
+<td>11:00-12:30</td>
+<td>Room 26</td>
+<td>
+<p>Session 3: Privacy in Distributed Networks</p>
+<p>Session Chair: Fagen Li</p>
+</td>
+</tr>
+<tr class="odd">
+<td>12:30-14:00</td>
+<td>Room 2+3</td>
+<td>Lunch</td>
+</tr>
+<tr class="even">
+<td>14:00-15:30</td>
+<td>Room 26</td>
+<td>
+<p>Session 4: Blockchain &amp; Smart Contract Security</p>
+<p>Session Chair: Yu Chen</p>
+</td>
+</tr>
+<tr class="odd">
+<td>15:30-16:00</td>
+<td>Foyer</td>
+<td>Coffee Break</td>
+</tr>
+<tr class="even">
+<td>18:30-21:00</td>
+<td>Lisboeta Macau</td>
+<td>Banquet</td>
+</tr>
+<tr class="day-row odd">
+<td colspan="3"><strong>Day 3 Aug 5, 2026</strong></td>
+</tr>
+<tr class="even">
+<td>08:00-12:00</td>
+<td colspan="2">Technical &amp; Cultural Visit</td>
+</tr>
+</tbody>
+</table>
+</div></section><section class="paper-session"><h1 id="paper-session">Paper Session</h1>
+<article id="oral-session-1" class="session-card"><p class="eyebrow session-title"><strong>FCS Oral Session 1: Post-Quantum Lattice Crypto</strong></p>
+<p><strong>Session Chair: Zhe Xia</strong></p>
+<p>Day 1 Aug 3, 2026 11:30-13:00 | Room 26</p>
+<div class="table-wrap">
+<table class="session-table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 89%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#25</th>
+<th>
+<em><strong>SR-SM9-KA: A Subversion-Resilient SM9 Key Agreement with
+Reverse Firewalls</strong></em><br>
+Wenxiao Li, Guangyao You and Yuyang Zhou</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>#26</td>
+<td>
+<em><strong>L-PSC: An Identity-Based Proxy Signcryption Scheme using
+Lattice</strong></em><br>
+Bingfan Gao, Jincao Meng, Chaoyang Li and Xiangjun Xin</td>
+</tr>
+<tr class="even">
+<td>#27</td>
+<td>
+<em><strong>A Lattice-Based Proxy Aggregate Signature
+Scheme</strong></em><br>
+Yingke Li, Kaifei Chen and Chaoyang Li</td>
+</tr>
+<tr class="odd">
+<td>#46</td>
+<td>
+<em><strong>Low-Cost Distribution-Mimicking Preprocessing for
+Machine-Learning Attacks on Binary LWE<br>
+</strong></em>Yuntao Wang, Kazuma Kubota and Haibo Zhang</td>
+</tr>
+<tr class="even">
+<td>#70</td>
+<td>
+<em><strong>Lattice-based Revocable Multi Authority Attribute Based
+Encryption<br>
+</strong></em>Xingting Dong and Minghe Zhang</td>
+</tr>
+<tr class="odd">
+<td>#73</td>
+<td>
+<em><strong>A Multi-Party Private Set Intersection Cardinality
+Protocol From Lattices<br>
+</strong></em>Hou-Cheong Choi and Yusong Du</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong><br>
+</strong></p>
+</article><article id="oral-session-2" class="session-card"><p class="eyebrow session-title"><strong>FCS Oral Session 2: Secure Data Sharing</strong></p>
+<p><strong>Session Chair: Yuntao Wang</strong></p>
+<p>Day 1 Aug 3, 2026 14:00-15:30 | Room 26</p>
+<div class="table-wrap">
+<table class="session-table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 89%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#2</th>
+<th>
+<em><strong>Hierarchical Identity-Based Encryption for Medical data
+Storage<br>
+</strong></em>Chenxi Yang, Mengdi Ouyang and Fagen Li</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>#3</td>
+<td>
+<em><strong>PrCoSe: Towards Privacy-Preserving and Communicable
+Healthcare Services for Flexible and Secure EHR Sharing<br>
+</strong></em>Qing Wang, Shengke Zeng, Yanping Wang, Shihai Jiang,
+Peirong Li and Hongkai Li</td>
+</tr>
+<tr class="even">
+<td>#13</td>
+<td>
+<em><strong>BAC-DA: A Bilateral Access Control Scheme for Secure
+Data Sharing in Drug Approvals<br>
+</strong></em>Jintang Wang, Tao Wang, Bo Yang, Zhichao Wang, Dengbo
+Zhang and Rui Yang</td>
+</tr>
+<tr class="odd">
+<td>#41</td>
+<td>
+<em><strong>Reputation-Based Message Credibility Evaluation for
+VANETs with Dynamic Reputation Update and Conditional Privacy
+Preservation<br>
+</strong></em>Zhe Xia, Yifan Liu, Rui Su and Jun Zhang</td>
+</tr>
+<tr class="even">
+<td>#33</td>
+<td>
+<em><strong>CryptoComply-KG: A Knowledge Graph-Based Framework for
+Cryptographic Compliance Assessment<br>
+</strong></em>Liujing He, Yuanbo Guo, Jing Zhang and Yue Zhao</td>
+</tr>
+<tr class="odd">
+<td>#77</td>
+<td>
+<em><strong>Private Data Computing with Fine-Grained Bilateral
+Access Control<br>
+</strong></em>Yanna Chen, Meiyan Xiao, Jian Liu, Willy Susilo and Qiong
+Huang</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong><br>
+</strong></p>
+</article><article id="oral-session-3" class="session-card"><p class="eyebrow session-title"><strong>FCS Oral Session 3: Privacy in Distributed
+Networks</strong></p>
+<p><strong>Session Chair: Fagen Li</strong></p>
+<p>Day 2 Aug 4, 2026 11:00-12:30 | Room 26</p>
+<div class="table-wrap">
+<table class="session-table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 89%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#23</th>
+<th>
+<em><strong>FedCASD: A Customized Aggregation and Synergistic
+Defense Framework for Robust Federated Learning<br>
+</strong></em>Jie Wang, Yanrui Zhao, Lan Zhao and Yitao Chen</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>#24</td>
+<td>
+<em><strong>FB-DPI: Forward and Backward Private Two-Stage Encrypted
+Deep Packet Inspection<br>
+</strong></em>Chenguang Liu, Jilei Li, Yifei Wang and Yu Chen</td>
+</tr>
+<tr class="even">
+<td>#31</td>
+<td>
+<em><strong>One-Shot Secure Aggregation for Federated Learning via
+Verifiable Seed Sharing<br>
+</strong></em>Yihan Zhang and Zhenhua Liu</td>
+</tr>
+<tr class="odd">
+<td>#14</td>
+<td>
+<em><strong>Minimizing Location Exposure: Task Allocation under
+Bilateral Privacy Protection in Mobile Crowdsourcing<br>
+</strong></em>Yan Liu, Yuzhu Wang, Yifei Wang and Gang Shen</td>
+</tr>
+<tr class="even">
+<td>#32</td>
+<td>
+<em><strong>Predictive and Zero Trust-Aware 6G Network Slicing via
+Transformer-SAC Co-Design<br>
+</strong></em>Yulong Fu, Bikal Poudel and Ahmed M. A. Qamhan</td>
+</tr>
+<tr class="odd">
+<td>#30</td>
+<td>
+<em><strong>An Encrypted Deduplication Based on Proxy Re-Encryption
+for Fog Computing<br>
+</strong></em>Xinyan Wu, Fagen Li and Wenke Zhang</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p><strong><br>
+</strong></p>
+</article><article id="oral-session-4" class="session-card"><p class="eyebrow session-title"><strong>FCS Oral Session 4: Blockchain &amp; Smart Contract
+Security</strong></p>
+<p><strong>Session Chair: Yu Chen</strong></p>
+<p>Day 2 Aug 4, 2026 14:00-15:30 | Room 26</p>
+<div class="table-wrap">
+<table class="session-table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 89%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>#5</th>
+<th>
+<em><strong>Adapt-BLS Signature Based Privacy-preserving E-currency
+Payment Channel Hub<br>
+</strong></em>Jing Wang, Dong Liu and Yayu Zhou</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>#34</td>
+<td>
+<em><strong>An improved DPoS Consensus Mechanism Based on
+Distributed Verifiable Random Function<br>
+</strong></em>Jing Wang, Mengwei Hu and Dong Liu</td>
+</tr>
+<tr class="even">
+<td>#37</td>
+<td>
+<em><strong>Multi-Agent Heterogeneous Graph Attention Network for
+Smart Contract Logical Vulnerability Detection<br>
+</strong></em>Jialin Li, Minfeng Qi, Yaxuan Xiong, Lefeng Zhang, Zhe Sun
+and Tianqing Zhu</td>
+</tr>
+<tr class="odd">
+<td>#51</td>
+<td>
+<em><strong>The Novel Fractal Chaotic Systems Based on the Cellular
+Neural Network<br>
+</strong></em>Xiaoming Song and Guodong Li</td>
+</tr>
+<tr class="even">
+<td>#79</td>
+<td>
+<p><em><strong>A Modular Construction of Threshold Adaptor
+Signatures from</strong></em></p>
+<p><em><strong>Pedersen Equivocal Openings<br>
+</strong></em>Jing Gao, Yuzhu Wang, Yu Chen, Qiliang Yang and Feng
+Zhu</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div></article></section></main></body>
 </html>
